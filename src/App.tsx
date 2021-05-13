@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useReducer } from 'react';
+import {Switch, BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
+import {reducer, ReducState} from './store/reducer';
+import Context from './store';
+import SPLASHSCREEN from './views/splashscreen';
+import GALLERY from './views/gallery';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+  const [state, dispatch] = useReducer(reducer, ReducState);
+  
+  let GlobalStore = {state, dispatch};
+
+   return (
+    <Context.Provider value={GlobalStore}>
+    <Router>
+     <Switch> 
+       <Route exact path={'/'} component={SPLASHSCREEN}  />
+       <Route exact path={'/gallery'} component={GALLERY}  />
+       <Redirect from={'*'} to='/'  />
+     </Switch>
+ </Router>
+</Context.Provider>
   );
 }
 
