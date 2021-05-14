@@ -7,6 +7,7 @@ import Context from './store';
 import SPLASHSCREEN from './views/splashscreen';
 import GALLERY from './views/gallery';
 
+
 function App() {
     
   const [state, dispatch] = useReducer(reducer, ReducState);
