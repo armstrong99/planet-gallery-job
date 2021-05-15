@@ -33,12 +33,15 @@ export const reducer = (state: State, {type, payload}: Action) => {
                         let filterImgData = state.imgData?.filter(data => data.name !== name)
         
                         arr = filterImgData!
+
+                        return name
                     }
 
                     else {
                         let filterImgData = arr.filter(data => data.name !== name)
         
-                        arr = filterImgData
+                        arr = filterImgData;
+                        return name
                     }
             })
 
