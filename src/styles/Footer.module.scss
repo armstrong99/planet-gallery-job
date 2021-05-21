@@ -1,0 +1,146 @@
+.footer {
+    background: #02181E;
+    height: auto;
+    margin: 4rem 0 0 0;
+}
+
+.h3 {
+width: 100%;
+font-style: normal;
+line-height: 22px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF
+}
+
+.p {
+  
+
+ font-style: normal;
+font-weight: normal;
+ /* line-height: 12px; */
+text-align: center;
+
+color: #FFFFFF;
+
+opacity: 0.8
+}
+
+.form {
+ background: #FFFFFF;
+box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+}
+
+
+.input {
+height: 34px;
+border: 1px solid #000000;
+box-sizing: border-box;
+}
+
+.input:focus {
+    border: 1px solid #000000;
+ }
+
+.textarea {
+width: calc(100% - 2rem);
+height: 154px;
+border: 1px solid #000000;
+box-sizing: border-box;
+padding: .5rem;
+}
+
+// .button:disabled {
+// width: 159px;
+// height: 42px;
+// box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+// border-radius: 5px;
+// margin: auto auto 1.5rem auto;
+// font-style: normal;
+// font-weight: bold;
+// font-size: 14px;
+// line-height: 17px;
+// text-transform: uppercase;
+// text-align: center;
+// color: #FFFFFF
+// }
+
+.button {
+background: #02181E;
+width: 159px;
+height: 42px;
+box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+margin: auto auto 1.5rem auto;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 17px;
+text-transform: uppercase;
+text-align: center;
+color: #FFFFFF;
+transition: 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+        &:disabled {
+            background: #C4C4C4;
+            transition: 1s cubic-bezier(0.215, 0.610, 0.355, 91);
+        }
+ }
+
+.copyright {
+width: 100%;
+font-style: normal;
+font-weight: normal;
+text-align: center;
+color: #FFFFFF;
+}
+
+.input {
+    width: calc(100% - 2rem);
+    margin: 2rem auto auto auto;
+    padding: .5rem;
+    opacity: 0.5;
+    }
+    .input:focus {
+        border: 1px solid #000000;
+        outline: none;
+        opacity: 1;
+        transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+     }
+    .input:nth-child(2) {
+    width: calc(100% - 2rem);
+    margin: 2rem auto auto auto;
+    padding: .5rem;
+    }
+    .input:nth-child(3) {
+    width: calc(100% - 2rem);
+    margin: 2rem auto auto auto;
+    padding: .5rem;
+    }
+
+    .textarea {
+        width: calc(100% - 2rem);
+        height: 154px;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        margin: 2rem auto;
+        padding: .5rem;
+        opacity: 0.5;
+         }
+
+    .textarea:focus {
+        outline: none;
+        opacity: 1;
+        transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+     }
+
+@media only screen and (max-width: 48rem) {
+    .form {
+    width: calc(100% - 2rem);
+    margin: auto;
+    }
+ }
+

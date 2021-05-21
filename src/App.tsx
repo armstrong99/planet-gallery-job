@@ -4,8 +4,8 @@ import { useReducer } from 'react';
 import {Switch, BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
 import {reducer, ReducState} from './store/reducer';
 import Context from './store';
-import SPLASHSCREEN from './views/splashscreen';
 import GALLERY from './views/gallery';
+import Home from './views/home';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
     <Context.Provider value={GlobalStore}>
     <Router>
      <Switch> 
-       <Route exact path={'/'} component={SPLASHSCREEN}  />
+       <Route exact path={'/'} component={Home}  />
        <Route exact path={'/gallery'} component={GALLERY}  />
        <Redirect from={'*'} to='/'  />
      </Switch>

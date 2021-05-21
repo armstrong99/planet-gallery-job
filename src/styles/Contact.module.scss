@@ -1,0 +1,23 @@
+.content {
+ width: 264px;
+height: auto;
+font-style: normal;
+font-size: 20px;
+line-height: 140%;
+ 
+text-align: center;
+
+color: #000000;
+}
+
+@media only screen and (min-width:48rem) {
+    .contactCard {
+       width: 311.41px;
+       height: 315.99px;
+       background: #FFFFFF;
+        box-shadow: 4px 0px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 5px; 
+        transform: translateY(-120px);
+     }
+}
+ 

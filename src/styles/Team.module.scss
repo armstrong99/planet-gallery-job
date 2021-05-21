@@ -1,0 +1,32 @@
+.teamName {
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 120%;
+color: #000000;
+text-align: center;
+}
+
+.teamPosition {
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 120%;
+color: #000000;
+text-align: center;
+}
+
+ 
+   @media only screen and (min-width: 48rem) {
+       .h2 {
+           height: auto;
+           & + section {
+               height: auto;
+               align-items: center;
+               justify-content: space-around;
+             }
+            
+        }
+
+   }
+ 
