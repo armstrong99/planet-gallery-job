@@ -6,6 +6,7 @@ export interface ImageData{
         id?: string 
     }
 export interface State {
+        scrollWindowPosition?: number,
         name?: string[],
         snackBarMessage?: string,
         snackBarShow?: boolean,

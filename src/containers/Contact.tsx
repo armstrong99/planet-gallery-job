@@ -1,6 +1,8 @@
 import Contact from "../components/contact";
 import { ContactTypes } from "../@types/contact";
-  
+import locationIcon from '../assets/images/ei_location.svg'
+import emailIcon from '../assets/images/email.svg'
+import phoneIcon from '../assets/images/phone.svg'
 export interface ContactContainerProps {
     
 }
@@ -8,15 +10,15 @@ export interface ContactContainerProps {
 const ContactContainer: React.FC<ContactContainerProps> = () => {
     const contactDetails: ContactTypes[] = [
         {
-            icon: "ei_location.svg",
+            icon: locationIcon,
             content: "Last Floor Don Hiro Filling \n Station, Opposite GTBank, \n Sani Abacha Expressway, \n Yenagoa, Bayelsa State \n Nigeria.",
          },
         {
-            icon: "phone.svg",
+            icon: phoneIcon,
             phone: ['+234(0)806 123 4567',  '+234(0)806 123 4567'],
          },
         {
-            icon: "email.svg",
+            icon: emailIcon,
             content: "info@qoretek.co",
          },
     ]

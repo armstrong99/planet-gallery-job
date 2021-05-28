@@ -1,19 +1,20 @@
 import { ContactTypes } from "../@types/contact";
-import  '../styles/Contact.module.scss'
- 
+import  css from '../styles/Contact.module.scss'
+
+
 const Contact: React.FC<ContactTypes> = ({icon, content, index, phone}) => {
 
     return ( 
         <>
-<section className={`flex items-center md:justify-center md:h-auto justify-around flex-col ${index! > 0 ? 'my-12' : ''} contactCard`} >
+<section className={`flex items-center md:justify-center md:h-auto justify-around flex-col ${index! > 0 ? 'my-12' : ''} ${css.contactCard}`} >
 
 <img src={icon} /> 
 
 {
     index === 0 ? 
-    <address className={`content font-normal mt-6`}> {content} </address> 
+    <address className={`${css.content} font-normal mt-6`}> {content} </address> 
     : index === 1 ?  
-            <section className={`content font-normal mt-6`}>
+            <section className={`${css.content} font-normal mt-6`}>
                 <p> 
                 <a href={`tel:${'+234 34494 8848'}`}> {'+234 34494 8848'} </a>
                 </p>
@@ -23,7 +24,7 @@ const Contact: React.FC<ContactTypes> = ({icon, content, index, phone}) => {
             </section>
              
      :
-            <p className={`content font-normal mt-6`}>
+            <p className={`${css.content} font-normal mt-6`}>
             <a href={`mailto:${content}`} > {content} </a>    
             </p>
 
