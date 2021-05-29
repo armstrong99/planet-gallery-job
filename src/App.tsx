@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import { reducer, ReducState } from "./store/reducer";
 import Context from "./store";
-import GALLERY from "./views/gallery";
 import Home from "./views/home";
 
 
@@ -23,8 +22,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path={"/"} component={Home} />
-          <Route exact path={"/gallery"} component={GALLERY} />
-          <Redirect from={"*"} to="/" />
+           <Redirect from={"*"} to="/" />
         </Switch>
       </Router>
     </Context.Provider>

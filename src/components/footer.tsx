@@ -69,7 +69,7 @@ const Footer: React.FC<FooterProps> = () => {
         </p>
 
         <form
-          className={`${css.form} md:w-7/12 md:m-auto md:p-4 flex flex-col justify-center items-around`}
+          className={`${css.form} md:w-6/12 md:m-auto md:p-4 flex flex-col justify-center items-around`}
         >
           <input
             className={css.input}

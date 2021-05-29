@@ -1,6 +1,9 @@
 import {TeamTypes} from '../@types/team'
 import Team from '../components/team'
 import '../styles/Team.module.scss' 
+import {useContext, useEffect, useRef} from 'react'
+import Context from '../store'
+import Fade from 'react-reveal/Flip'
 export interface TeamContainerProps {
     
 }
@@ -102,16 +105,40 @@ const TeamContainer: React.FC<TeamContainerProps> = () => {
             },
             
         ]
+        const divRef = useRef<HTMLDivElement>(null);
+
+        const {htmlRef} = useContext(Context).state
+        const {dispatch} = useContext(Context)
+
+        useEffect(() => {
+
+            if (htmlRef === "team") {
+               divRef.current?.scrollIntoView({
+                 behavior: "smooth",
+                 block: "start",
+                 inline: "nearest",
+               });
+             }
+             dispatch({
+               type: "SCROLL_INTO_VIEW",
+               payload: {
+                 htmlRef: "elem",
+               },
+             });
+           }, [htmlRef, dispatch]);
  
     return (
         <>
+        <div ref={divRef}></div>
         <section className="md:h-auto mt-24">
              <h2 className={`text-xl md:text-4xl font-bold text-center mt-12 h2`}>Meet Our Team</h2>
+                     <Fade duration={1500}>
                  <section className="flex flex-col md:w-4/5 md:m-auto flex-wrap md:flex-row w-full justify-around items-around md:h-auto">
                     {  
                     Teams.map((team, i) => <Team  {...team} key={i} index={i} />  )
                     } 
                 </section>
+                    </Fade>
         </section>
          </> 
         )
