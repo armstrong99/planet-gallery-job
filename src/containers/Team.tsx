@@ -3,7 +3,7 @@ import Team from '../components/team'
 import '../styles/Team.module.scss' 
 import {useContext, useEffect, useRef} from 'react'
 import Context from '../store'
-import Fade from 'react-reveal/Flip'
+import Fade from 'react-reveal/Fade'
 export interface TeamContainerProps {
     
 }

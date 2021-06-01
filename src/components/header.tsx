@@ -16,9 +16,12 @@ const WRAPPER = styled.header<IWrapper>`
   background: ${(props) => (props.animate ? "white" : "transparent")};
   transition: cubic-bezier(0.645, 0.045, 0.355, 2) all 0.5s;
   z-index: 4590;
-  @media screen and (max-width: 48rem) {
-  }
   section {
+    @media screen and (min-width: 48rem) {
+      margin-left: ${(props) => (!props.animate ? "auto" : "25%")};
+      transition: cubic-bezier(0.645, 0.045, 0.355, 2) all 1s;
+    }
+    transition: cubic-bezier(0.645, 0.045, 0.355, 2) all 1s;
     width: 25rem;
 
     ul {
@@ -49,7 +52,7 @@ const Header: React.FC<HeaderProps> = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       let winSPos = window.pageYOffset;
-      console.log(winSPos);
+
       dispatch({
         type: "Scroll_Window_Position",
         payload: {

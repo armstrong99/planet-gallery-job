@@ -6,6 +6,7 @@ import { SocialMedia } from "../@types/team";
 import "../styles/Footer.module.scss";
 import { useEffect, useState } from "react";
 import Contact from "../containers/Contact";
+ 
 
 export interface FooterProps {}
 
@@ -54,9 +55,16 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <>
       <footer
+        style={{
+          background:
+            "url(https://images.unsplash.com/photo-1559163499-413811fb2344?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvZmZlZSUyMGxhcHRvcHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          marginTop: "15rem",
+        }}
         className={`${css.footer} pt-10 pb-4 md:h-auto md:mt-32`}
-        style={{ marginTop: "15rem" }}
       >
+        <div id="footerOverlay"></div>
         <Contact />
         <h3 className={`${css.h3} text-2xl font-semibold`}>
           Want to work with us ?
@@ -77,7 +85,7 @@ const Footer: React.FC<FooterProps> = () => {
             placeholder="NAME"
             name="name"
             required
-            aria-required
+             aria-required
             onChange={({ target }) =>
               setFormData({ ...formData, name: target.value })
             }

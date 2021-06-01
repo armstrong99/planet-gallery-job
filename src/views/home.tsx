@@ -43,6 +43,7 @@ const Home: React.FC<HomeProps> = () => {
      <main className="md:h-auto">
      {mainBody.map((val, k) => <MainBody {...val} key={k} index={k}/>)}
      <Projects />
+     <hr />
       <Team />
       </main>
       <Footer />

@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { useState, useEffect, useRef } from "react";
 import { useContext } from "react";
 import Context from "../store";
+ 
 export interface MainBodyProps {
   title: string;
   imgAlt: string;
